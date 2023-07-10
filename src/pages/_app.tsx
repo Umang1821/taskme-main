@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <title>TaskMe</title>
           <meta name="description" content="Minimalistic task manager" />
           <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/favicon.icon" />
         </Head>
         <Component {...pageProps} />
       </FoldersProvider>
