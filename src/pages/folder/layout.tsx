@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useDarkMode } from '../../utils/DarkModeContext'
 import { ReactNode } from 'react'
 import InputColors from '../../components/InputColors'
 import { useFolders } from '../../utils/FoldersContext'
@@ -7,7 +6,6 @@ import { useRouter } from 'next/router'
 
 const Layout = ({ children, folder }: { children: ReactNode; folder: string }) => {
   const router = useRouter()
-  const { darkMode, setDarkMode } = useDarkMode()
   const [folders, dispatch] = useFolders()
 
   const deleteFolder = () => {
@@ -25,7 +23,6 @@ const Layout = ({ children, folder }: { children: ReactNode; folder: string }) =
           <Link href={'/'} className="bi bi-chevron-left"></Link>
           <div className="flex gap-6">
             <button onClick={deleteFolder} className="bi bi-trash3"></button>
-            <button onClick={() => setDarkMode(!darkMode)} className="bi bi-moon"></button>
           </div>
         </nav>
         {children}
